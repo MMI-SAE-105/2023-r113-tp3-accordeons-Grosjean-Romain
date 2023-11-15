@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{menuIsOpen:false}">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,9 +10,22 @@
 </head>
 
 <body>
+  <header>
+    <section>
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen">Menu</button>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duraion.800ms>
+        <ul>
+          <li><a href="index.html">Homepage</a></li>
+          <li><a href="01-accordeon-booleen.html">Booléen</a></li>
+          <li><a href="03-accordeon-collapse.html">x-collapse</a></li>
+          <li><a href="04-accordeon-horizontal.html">Horizontal</a></li>
+          <li><a href="05-onglets.html">Onglets</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
   <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
-
-  <div x-data="{isOpen:1}">
+  <div x-data="{isOpen:0}">
     <section>
       <button @click="isOpen = (isOpen === 1)?0:1">Fruit N°1</button>
       <p x-show="isOpen === 1" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Pastèque
@@ -28,11 +41,23 @@
       <button @click="isOpen = (isOpen === 3)?0:3">Fruit
         N°3</button>
       <p x-show="isOpen === 3" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Poire</p>
-
-
-
-
     </section>
+    <section>
+      <button @click="isOpen = (isOpen === 4)?0:4">Fruit
+        N°4</button>
+      <p x-show="isOpen === 4" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Fraise
+      </p>
+    </section>
+    <section>
+      <button @click="isOpen = (isOpen === 2 || isOpen === 4) ? 0 : 2">Fruits rouges</button>
+      <p x-show="isOpen === 2 || isOpen === 4" x-transition:enter.scale.90.origin.top
+        x-transition:leave.scale.50.origin.top>
+      </p>
+    </section>
+
+
+
+  
   </div>
 </body>
 

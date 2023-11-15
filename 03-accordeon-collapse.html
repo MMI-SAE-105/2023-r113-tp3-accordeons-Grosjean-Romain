@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{menuIsOpen:false}">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,6 +10,20 @@
 </head>
 
 <body>
+  <header>
+    <section>
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen">Menu</button>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
+        <ul>
+          <li><a href="index.html">Homepage</a></li>
+          <li><a href="01-accordeon-booleen.html">Booléen</a></li>
+          <li><a href="02-accordeon-nombre.html">Nombre</a></li>
+          <li><a href="04-accordeon-horizontal.html">Horizontal</a></li>
+          <li><a href="05-onglets.html">Onglets</a>
+        </ul>
+      </nav>
+    </section>
+  </header>
   <h1>Accordéon avec <code>x-collapse</code></h1>
 </body>
 

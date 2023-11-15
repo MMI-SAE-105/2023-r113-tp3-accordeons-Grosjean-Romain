@@ -1,12 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{
-  menuIsOpen:false,
-  Animaux:{
-    A1:false,
-    A2:false,
-    A3:false
-  }
-}" :class="{noscroll:menuIsOpen,}">
+<html lang="fr" x-data="{ menuIsOpen: false, Animaux: { A1: false, A2: false, A3: false } }"
+  :class="{ noscroll: menuIsOpen }">
 
 <head>
   <meta charset="UTF-8" />
@@ -17,12 +11,23 @@
 </head>
 
 <body>
-  <header>
-    <h1>Accordéon avec des booléens</h1>
+  <header x-data="{ isOpen: false }" class="Menu">
+    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen">Menu</button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
+      <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="02-accordeon-nombre.html">Booléen</a></li>
+        <li><a href="03-accordeon-collapse.html">x-collapse</a></li>
+        <li><a href="04-accordeon-horizontal.html">Horizontal</a></li>
+        <li><a href="05-onglets.html">Onglets</a></li>
+      </ul>
+    </nav>
   </header>
-  <div id="Animaux" class="accordeon" x-data>
-    <section x-data>
-      <button @click="menuIsOpen = !menuIsOpen; Animaux.A1 = !Animaux.A1">Reptiles</button>
+  <h1>Accordéon avec des booléens</h1>
+  <div id="Animaux" class="accordeon" x-data="{ isOpen: false }"
+    x-data="{ Animaux: { A1: false, A2: false, A3: false } }" x-transition.duration.800ms>
+    <section x-data="{ isOpen: false }" class="Animaux">
+      <button @click="isOpen = !isOpen; Animaux.A1 = !Animaux.A1">Reptiles</button>
       <p id="Reptile" x-show="Animaux.A1" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>Lorem
         ipsum, dolor
         sit amet consectetur adipisicing elit.
@@ -31,8 +36,8 @@
         voluptates veritatis dignissimos rem at illo assumenda animi eligendi, dolores ullam, quibusdam asperiores quis
         provident! Non.</p>
     </section>
-    <section x-data>
-      <button @click="menuIsOpen = !menuIsOpen; Animaux.A2 = !Animaux.A2">Oiseaux</button>
+    <section x-data="{ isOpen: false }" class="Animaux">
+      <button @click="isOpen = !isOpen; Animaux.A2 = !Animaux.A2">Oiseaux</button>
       <p id="Oiseaux" x-show="Animaux.A2" x-transition:enter.duration.800ms x-transition:leave.duration.800ms> Sed
         laborum culpa
         asperiores, dicta tempora, aut expedita
@@ -41,8 +46,8 @@
         similique provident cum iusto perspiciatis quasi odio nobis dicta neque laudantium, dolores excepturi pariatur
         ea id?</p>
     </section>
-    <section x-data>
-      <button @click="menuIsOpen = !menuIsOpen; Animaux.A3 = !Animaux.A3">Mammifères</button>
+    <section x-data="{ isOpen: false }" class="Animaux">
+      <button @click="isOpen = !isOpen; Animaux.A3 = !Animaux.A3">Mammifères</button>
       <p id="Mammifères" x-show="Animaux.A3" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>Animi
         accusamus, numquam vel quis dolores harum
         laudantium repellat consequuntur
