@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{isOpen = 0
+  Fruits:{
+    F1 = 1,
+    F2 = 2,
+    F3 = 3
+  }
+}
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
-  <script defer src="https://unpkg.com/alpinejs"></script>
+  <meta charset=" UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+<script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
 <body>
   <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+
+  <div x-data="{isOpen = 0}">
+    <section>
+      <button @click="isOpen">Fruit N°1</button>
+      <p x-show="open === 1" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Pastèque</p>
+    </section>
+    <section>
+      <button @click=" isOpen">Fruit N°2</button>
+      <p x-show="open === 2">Framboise</p>
+    </section>
+    <section>
+      <button @click="isOpen">Fruit N°3</button>
+      <p x-show="open === 3">Poire</p>
+    </section>
+  </div>
+
+
 </body>
 
 </html>
