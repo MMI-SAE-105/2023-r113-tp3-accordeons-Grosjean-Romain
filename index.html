@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen:false}">
+<html lang="fr" x-data="{
+  menuIsOpen:false,
+pM:false
+
+}" :class="{noscroll:menuIsOpen,}" x-data="{menuIsOpen:false}">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test de divers accordéons</title>
+  <title>Éon d'Accordéons</title>
   <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
+<link rel="icon" href="/public/icones/accordeon.svg">
+<link rel="stylesheet" href="/src/css/style.css">
+</link>
 
 <body>
   <header>
@@ -24,23 +31,34 @@
       </nav>
     </section>
   </header>
-  <h1>HOMEPAGE ACCORDÉONS</h1>
-  <h2>Liste des pages</h2>
-  <section>
-    <ul>
-      <li>
-        <a href="01-accordeon-booleen.html">Accordéon avec des booléens</a>
-      </li>
-      <li>
-        <a href="02-accordeon-nombre.html">Accordéon mémorisant par un nombre l'élèment ouvert</a>
-      </li>
-      <li>
-        <a href="03-accordeon-collapse.html">Accordéon avec <code>x-collapse</code></a>
-      </li>
-      <li><a href="04-accordeon-horizontal.html">Accordéon horizontal</a></li>
-      <li><a href="05-onglets.html">Onglets</a></li>
-    </ul>
-  </section>
+
+  <main>
+    <section>
+      <h1>Éon d'Accordéons</h1>
+      <h2>Accueil</h2>
+      <p>
+        Bienvenue à tous. Ceci est une page dédiée à différentes possibilités d'accordéons au sein d'un site web.
+      </p>
+      <h2>Liste des pages</h2>
+    </section>
+    <button aria-controls="petitmenu" @click="pM = ! pM">
+      Chemins d'accès</button>
+    <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
+      <ul>
+        <li>
+          <a href="01-accordeon-booleen.html">Accordéon avec des booléens</a>
+        </li>
+        <li>
+          <a href="02-accordeon-nombre.html">Accordéon mémorisant par un nombre l'élèment ouvert</a>
+        </li>
+        <li>
+          <a href="03-accordeon-collapse.html">Accordéon avec <code>x-collapse</code></a>
+        </li>
+        <li><a href="04-accordeon-horizontal.html">Accordéon horizontal</a></li>
+        <li><a href="05-onglets.html">Onglets</a></li>
+      </ul>
+      </section>
+  </main>
 </body>
 
 </html>
