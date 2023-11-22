@@ -1,30 +1,63 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen:false}">
+<html lang="fr" x-data="{ menuIsOpen: false, Planet: { P1: false, P2: false, P3: false } }"
+  :class="{ noscroll: menuIsOpen }">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordéon avec x-collapse</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
 <body>
   <header>
-    <section>
-      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen">Menu</button>
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
-        <ul>
-          <li><a href="../index.html">Homepage</a></li>
-          <li><a href="../01-accordeon-booleen.html">Booléen</a></li>
-          <li><a href="../02-accordeon-nombre.html">Nombre</a></li>
-          <li><a href="../04-accordeon-horizontal.html">Horizontal</a></li>
-          <li><a href="../05-onglets.html">Onglets</a>
-        </ul>
-      </nav>
-    </section>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
+      <ul>
+        <li><a href="../index.html">Homepage</a></li>
+        <li><a href="../pages-exo/01-accordeon-booleen.html">Booléen</a></li>
+        <li><a href="../pages-exo/02-accordeon-nombre.html">Nombre</a></li>
+        <li><a href="../pages-exo/04-accordeon-horizontal.html">Horizontal</a></li>
+        <li><a href="../pages-exo/05-onglets.html">Onglets</a>
+      </ul>
+    </nav>
   </header>
-  <h1>Accordéon avec <code>x-collapse</code></h1>
-</body>
+
+  <div id="Planet" class="planet">
+    <h1>Accordéon avec <code>x-collapse</code></h1>
+    <section x-data="{ isOpen: false }" class="Planet">
+      <button @click="isOpen = !isOpen; Planet.P1 = !Planet.P1">Terre</button>
+      <p id="Terre" x-show="Planet.P1" x-collapse>Lorem
+        ipsum, dolor
+        sit amet consectetur adipisicing elit.
+        Ipsa eveniet accusantium
+        possimus, nihil voluptate
+        voluptates veritatis dignissimos rem at illo assumenda animi eligendi, dolores ullam, quibusdam asperiores quis
+        provident! Non.</p>
+    </section>
+    <section x-data="{ isOpen: false }" class="Planet">
+      <button @click="isOpen = !isOpen; Planet.P2 = !Planet.P2">Mars</button>
+      <p id="Mars" x-show="Planet.P2" x-collapse> Sed
+        laborum culpa
+        asperiores, dicta tempora, aut expedita
+        voluptates quis,
+        consequuntur illum minima. Ipsa
+        similique provident cum iusto perspiciatis quasi odio nobis dicta neque laudantium, dolores excepturi pariatur
+        ea id?</p>
+    </section>
+    <section x-data="{ isOpen: false }" class="Planet">
+      <button @click="isOpen = !isOpen; Planet.P3 = !Planet.P3">Saturne</button>
+      <p id="Saturne" x-show="Planet.P3" x-collapse>Animi
+        accusamus, numquam vel quis dolores harum
+        laudantium repellat consequuntur
+        quae id reprehenderit quod
+        corporis? Exercitationem hic cumque excepturi, soluta dicta magni voluptate in possimus, tempora natus fugiat,
+        velit explicabo?</p>
+    </section>
+  </div>
+
 
 </html>

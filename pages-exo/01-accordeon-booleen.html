@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{ menuIsOpen: false, Animaux: { A1: false, A2: false, A3: false } }"
-  :class="{ noscroll: menuIsOpen }">
+<html lang="fr" x-data="{menuIsOpen: false,}" :class="{noscroll: menuIsOpen}">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordéon avec des booléens</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
 <body>
-  <header x-data="{ isOpen: false }" class="Menu">
-    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen">Menu</button>
+  <header>
+    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn">Menu</button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
       <ul>
         <li><a href="../index.html">Homepage</a></li>
-        <li><a href="../02-accordeon-nombre.html">Booléen</a></li>
-        <li><a href="../03-accordeon-collapse.html">x-collapse</a></li>
-        <li><a href="../04-accordeon-horizontal.html">Horizontal</a></li>
-        <li><a href="../05-onglets.html">Onglets</a></li>
+        <li><a href="../pages-exo/02-accordeon-nombre.html">Nombre</a></li>
+        <li><a href="../pages-exo/03-accordeon-collapse.html">x-collapse</a></li>
+        <li><a href="../pages-exo/04-accordeon-horizontal.html">Horizontal</a></li>
+        <li><a href="../pages-exo/05-onglets.html">Onglets</a></li>
       </ul>
     </nav>
   </header>
-  <h1>Accordéon avec des booléens</h1>
-  <div id="Animaux" class="accordeon" x-data="{ isOpen: false }"
-    x-data="{ Animaux: { A1: false, A2: false, A3: false } }" x-transition.duration.800ms>
-    <section x-data="{ isOpen: false }" class="Animaux">
-      <button @click="isOpen = !isOpen; Animaux.A1 = !Animaux.A1">Reptiles</button>
-      <p id="Reptile" x-show="Animaux.A1" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>Lorem
+
+  <div id="Animaux" class="animaux">
+    <h1>Accordéon avec des booléens</h1>
+    <section x-data="{ isOpen: false }" class="reptile">
+      <button @click="isOpen = !isOpen;">Reptiles</button>
+      <p id="reptile" x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>Lorem
         ipsum, dolor
         sit amet consectetur adipisicing elit.
         Ipsa eveniet accusantium
@@ -36,9 +37,9 @@
         voluptates veritatis dignissimos rem at illo assumenda animi eligendi, dolores ullam, quibusdam asperiores quis
         provident! Non.</p>
     </section>
-    <section x-data="{ isOpen: false }" class="Animaux">
-      <button @click="isOpen = !isOpen; Animaux.A2 = !Animaux.A2">Oiseaux</button>
-      <p id="Oiseaux" x-show="Animaux.A2" x-transition:enter.duration.800ms x-transition:leave.duration.800ms> Sed
+    <section x-data="{ isOpen: false }" class="oiseau">
+      <button @click="isOpen = !isOpen;">Oiseaux</button>
+      <p id="oiseau" x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms> Sed
         laborum culpa
         asperiores, dicta tempora, aut expedita
         voluptates quis,
@@ -46,9 +47,9 @@
         similique provident cum iusto perspiciatis quasi odio nobis dicta neque laudantium, dolores excepturi pariatur
         ea id?</p>
     </section>
-    <section x-data="{ isOpen: false }" class="Animaux">
-      <button @click="isOpen = !isOpen; Animaux.A3 = !Animaux.A3">Mammifères</button>
-      <p id="Mammifères" x-show="Animaux.A3" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>Animi
+    <section x-data="{ isOpen: false }" class="mammifere">
+      <button @click="isOpen = !isOpen;">Mammifères</button>
+      <p id="mammifere" x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>>Animi
         accusamus, numquam vel quis dolores harum
         laudantium repellat consequuntur
         quae id reprehenderit quod
