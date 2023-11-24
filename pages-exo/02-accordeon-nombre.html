@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen}">
+<html lang="fr" x-data="{menuIsOpen:false}" :class="{noscroll:menuIsOpen}">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+  <script defer src="https://unpkg.com/alpinejs"></script>
+  <link rel="icon" href="../public/icones/accordeon.svg">
+  <link rel="mainsheet" href="../src/css/main.css">
+  <link rel="stylesheet" href="../src/css/style.css">
+  </link>
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs"></script>
@@ -16,7 +21,7 @@
     <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
       <ul>
-        <li><a href="index.html">Homepage</a></li>
+        <li><a href="../index.html">Homepage</a></li>
         <li><a href="../pages-exo/01-accordeon-booleen.html">Booléen</a></li>
         <li><a href="../pages-exo/03-accordeon-collapse.html">x-collapse</a></li>
         <li><a href="../pages-exo/04-accordeon-horizontal.html">Horizontal</a></li>
@@ -24,7 +29,6 @@
       </ul>
     </nav>
   </header>
-
 
   <div x-data="{isOpen:0}">
     <h1>Accordéon de nombres</h1>

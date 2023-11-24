@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{ menuIsOpen: false, Planet: { P1: false, P2: false, P3: false } }"
-  :class="{ noscroll: menuIsOpen }">
+<html lang="fr" x-data="{menuIsOpen:false}" :class="{noscroll:menuIsOpen}">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordéon avec x-collapse</title>
+  <script defer src="https://unpkg.com/alpinejs"></script>
+  <link rel="icon" href="../public/icones/accordeon.svg">
+  <link rel="mainsheet" href="../src/css/main.css">
+  <link rel="stylesheet" href="../src/css/style.css">
+  </link>
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs"></script>
@@ -28,9 +32,10 @@
 
   <div id="Planet" class="planet">
     <h1>Accordéon avec <code>x-collapse</code></h1>
-    <section x-data="{ isOpen: false }" class="Planet">
-      <button @click="isOpen = !isOpen; Planet.P1 = !Planet.P1">Terre</button>
-      <p id="Terre" x-show="Planet.P1" x-collapse>Lorem
+    <section x-data="{ isOpen: false }" class="terre">
+      <h2>Terre</h2>
+      <button @click="isOpen = ! isOpen">Terre</button>
+      <p id="Terre" x-show="isOpen" x-collapse>Lorem
         ipsum, dolor
         sit amet consectetur adipisicing elit.
         Ipsa eveniet accusantium
@@ -38,9 +43,10 @@
         voluptates veritatis dignissimos rem at illo assumenda animi eligendi, dolores ullam, quibusdam asperiores quis
         provident! Non.</p>
     </section>
-    <section x-data="{ isOpen: false }" class="Planet">
-      <button @click="isOpen = !isOpen; Planet.P2 = !Planet.P2">Mars</button>
-      <p id="Mars" x-show="Planet.P2" x-collapse> Sed
+    <section x-data="{ isOpen: false}" class="mars">
+      <h2>Mars</h2>
+      <button @click="isOpen = ! isOpen">Mars</button>
+      <p id="Mars" x-show="isOpen" x-collapse> Sed
         laborum culpa
         asperiores, dicta tempora, aut expedita
         voluptates quis,
@@ -48,9 +54,10 @@
         similique provident cum iusto perspiciatis quasi odio nobis dicta neque laudantium, dolores excepturi pariatur
         ea id?</p>
     </section>
-    <section x-data="{ isOpen: false }" class="Planet">
-      <button @click="isOpen = !isOpen; Planet.P3 = !Planet.P3">Saturne</button>
-      <p id="Saturne" x-show="Planet.P3" x-collapse>Animi
+    <section x-data="{ isOpen: false }" class="saturne">
+      <h2>Saturne</h2>
+      <button @click="isOpen = ! isOpen">Saturne</button>
+      <p id="Saturne" x-show="isOpen" x-collapse>Animi
         accusamus, numquam vel quis dolores harum
         laudantium repellat consequuntur
         quae id reprehenderit quod

@@ -7,12 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Onglets</title>
   <script defer src="https://unpkg.com/alpinejs"></script>
+  <link rel="icon" href="../public/icones/accordeon.svg">
+  <link rel="mainsheet" href="../src/css/main.css">
+  <link rel="stylesheet" href="../src/css/style.css">
+  </link>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
 <body>
   <header>
     <section>
-      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"class="header__menuBtn">Menu</button>
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
       <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
         <ul>
           <li><a href="../index.html">Homepage</a></li>
