@@ -18,54 +18,75 @@
 <body>
   <header>
     <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn"><img
-        src="../public/icones/MdiMenu.svg"></button>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
+        src="/public/icones/MdiMenu.svg"></button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
       <ul>
-        <li class="menu-item"><a href="../index.html">Homepage</a></li>
-        <li class="menu-item"><a href="../pages-exo/01-accordeon-booleen.html">Booléen</a></li>
-        <li class="menu-item"><a href="../pages-exo/02-accordeon-nombre.html">Nombre</a></li>
-        <li class="menu-item"><a href="../pages-exo/04-accordeon-horizontal.html">Horizontal</a></li>
-        <li class="menu-item"><a href="../pages-exo/05-onglets.html">Onglets</a>
-        <li class="menu-item"><a href="../pages-exo/error404.html">Erreur 404</a></li>
+        <li class="menu-item"><img src="../public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a
+            href="../index.html" class="link-text">Accueil<img src="../public/icones/MdiMenuRight.svg" alt="flèche lien"
+              class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="../public/icones/snake.svg" alt="Logo" class="logo"><a
+            href="../pages-exo/01-accordeon-booleen.html" class="link-text">Booléen<img
+              src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="../public/icones/fruit.svg" alt="Logo" class="logo"><a
+            href="../pages-exo/02-accordeon-nombre.html" class="link-text">Nombre<img
+              src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="../pages-exo/04-accordeon-horizontal.html" class="link-text">Horizontal<img
+              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="../pages-exo/05-onglets.html" class="link-text">Onglets<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="../public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
+            href="../pages-exo/error404.html" class="link-text">Erreur 404<img src="../public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
       </ul>
     </nav>
+    <aside>
+      <button aria-controls="Homepage" @click="HP = !HP" class="homelogo">
+        <a href="../index.html">
+          <img src="../public/icones/MdiHome.svg" alt="accueil">
+        </a>
+      </button>
+    </aside>
   </header>
 
-  <div id="Planet" class="planet">
-    <h1>Accordéon avec <code>x-collapse</code></h1>
-    <section x-data="{ isOpen: false }" class="terre">
-      <h2>Terre</h2>
-      <button @click="isOpen = ! isOpen">Terre</button>
-      <p id="Terre" x-show="isOpen" x-collapse>Lorem
-        ipsum, dolor
-        sit amet consectetur adipisicing elit.
-        Ipsa eveniet accusantium
-        possimus, nihil voluptate
-        voluptates veritatis dignissimos rem at illo assumenda animi eligendi, dolores ullam, quibusdam asperiores quis
-        provident! Non.</p>
-    </section>
-    <section x-data="{ isOpen: false}" class="mars">
-      <h2>Mars</h2>
-      <button @click="isOpen = ! isOpen">Mars</button>
-      <p id="Mars" x-show="isOpen" x-collapse> Sed
-        laborum culpa
-        asperiores, dicta tempora, aut expedita
-        voluptates quis,
-        consequuntur illum minima. Ipsa
-        similique provident cum iusto perspiciatis quasi odio nobis dicta neque laudantium, dolores excepturi pariatur
-        ea id?</p>
-    </section>
-    <section x-data="{ isOpen: false }" class="saturne">
-      <h2>Saturne</h2>
-      <button @click="isOpen = ! isOpen">Saturne</button>
-      <p id="Saturne" x-show="isOpen" x-collapse>Animi
-        accusamus, numquam vel quis dolores harum
-        laudantium repellat consequuntur
-        quae id reprehenderit quod
-        corporis? Exercitationem hic cumque excepturi, soluta dicta magni voluptate in possimus, tempora natus fugiat,
-        velit explicabo?</p>
-    </section>
-  </div>
-
+  <main>
+    <div id="Planet" class="planet">
+      <h1>Accordéon avec <code>x-collapse</code></h1>
+      <section x-data="{ isOpen: false }" class="terre">
+        <h2>Terre</h2>
+        <button @click="isOpen = ! isOpen">Terre</button>
+        <p id="Terre" x-show="isOpen" x-collapse>Lorem
+          ipsum, dolor
+          sit amet consectetur adipisicing elit.
+          Ipsa eveniet accusantium
+          possimus, nihil voluptate
+          voluptates veritatis dignissimos rem at illo assumenda animi eligendi, dolores ullam, quibusdam asperiores
+          quis
+          provident! Non.</p>
+      </section>
+      <section x-data="{ isOpen: false}" class="mars">
+        <h2>Mars</h2>
+        <button @click="isOpen = ! isOpen">Mars</button>
+        <p id="Mars" x-show="isOpen" x-collapse> Sed
+          laborum culpa
+          asperiores, dicta tempora, aut expedita
+          voluptates quis,
+          consequuntur illum minima. Ipsa
+          similique provident cum iusto perspiciatis quasi odio nobis dicta neque laudantium, dolores excepturi pariatur
+          ea id?</p>
+      </section>
+      <section x-data="{ isOpen: false }" class="saturne">
+        <h2>Saturne</h2>
+        <button @click="isOpen = ! isOpen">Saturne</button>
+        <p id="Saturne" x-show="isOpen" x-collapse>Animi
+          accusamus, numquam vel quis dolores harum
+          laudantium repellat consequuntur
+          quae id reprehenderit quod
+          corporis? Exercitationem hic cumque excepturi, soluta dicta magni voluptate in possimus, tempora natus fugiat,
+          velit explicabo?</p>
+      </section>
+    </div>
+  </main>
 
 </html>

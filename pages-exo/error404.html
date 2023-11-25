@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<html lang="fr" x-data="{
+  menuIsOpen:false,
+  pM:false
+}" :class="{noscroll:menuIsOpen,}" x-data="{menuIsOpen:false}">
 
 <head>
     <meta charset="UTF-8" />
@@ -14,6 +18,40 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
+
+<header>
+    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn"><img
+            src="/public/icones/MdiMenu.svg"></button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+        <ul>
+            <li class="menu-item"><img src="../public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a
+                    href="../index.html" class="link-text">Accueil<img src="../public/icones/MdiMenuRight.svg"
+                        alt="flèche lien" class="arrow__menu"></a></li>
+            <li class="menu-item"><img src="../public/icones/snake.svg" alt="Logo" class="logo"><a
+                    href="../pages-exo/01-accordeon-booleen.html" class="link-text">Booléen<img
+                        src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            <li class="menu-item"><img src="../public/icones/fruit.svg" alt="Logo" class="logo"><a
+                    href="../pages-exo/02-accordeon-nombre.html" class="link-text">Nombre<img
+                        src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            <li class="menu-item"><img src="../public/icones/saturn.svg" alt="Logo" class="logo"><a
+                    href="../pages-exo/03-accordeon-collapse.html" class="link-text">x-collapse<img
+                        src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+                    href="../pages-exo/04-accordeon-horizontal.html" class="link-text">Horizontal<img
+                        src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+                    href="../pages-exo/05-onglets.html" class="link-text">Onglets<img
+                        src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        </ul>
+    </nav>
+    <aside>
+        <button aria-controls="Homepage" @click="HP = !HP" class="homelogo">
+            <a href="../index.html">
+                <img src="../public/icones/MdiHome.svg" alt="accueil">
+            </a>
+        </button>
+    </aside>
+</header>
 
 
 
