@@ -1,7 +1,7 @@
 body {
 
-    background: #41969c;
-    font-family: 'Catamaran', sans-serif;
+    background: #1e4452;
+    font-family: 'Montserrat', sans-serif;
 }
 
 img {
@@ -14,7 +14,7 @@ img {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #8bc0d4;
+    background: #75c0c6;
     display: grid;
     place-content: center;
     padding: 0;
@@ -34,16 +34,29 @@ img {
 
 .menu-item a {
     text-decoration: none;
-    color: #41969c;
+    color: #1e4452;
     margin-top: 5px;
+}
+
+.link-text {
+    color: #1e4452;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .header__menuBtn {
     position: relative;
     z-index: 10;
-    background-color: #8bc0d4;
-    border-color: #ffffff;
-    color: #ffffff;
+    background: none;
+    background-color: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 .noscroll,
@@ -55,47 +68,40 @@ li {
     list-style-type: none;
 }
 
-.link-text {
-    color: #41969c;
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
 h1 {
-    color: #ffffff;
-    font-family: 'Catamaran', sans-serif;
+    color: #75c0c6;
+    font-family: 'Lato', sans-serif;
 }
 
 h2 {
     color: #dcf6fb;
+    font-family: 'Lato', sans-serif;
 }
 
 h3 {
     color: #dcf6fb;
-
     font-size: 16px;
+    font-family: 'Lato', sans-serif;
 }
 
 p {
-    color: #ffffff;
-    font-family: 'Crimson Pro', serif;
+    color: #75c0c6;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
 button {
-    background-color: #8bc0d4;
-    border-color: #ffffff;
+    background-color: #75c0c6;
+    border-color: #75c0c6;
     color: #ffffff;
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 dd {
-    color: #dcf6fb;
-    font-family: 'Catamaran', sans-serif;
+    color: #75c0c6;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
 
@@ -103,9 +109,65 @@ aside {
     position: absolute;
     top: 7px;
     right: 7px;
+    background: none;
+    border: none;
 }
 
 .media--fullwidth {
     width: 75%;
     height: auto;
+}
+
+.link__pages {
+    text-decoration: none;
+    color: #75c0c6;
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px;
+}
+
+a[href="https://dictionnaire.lerobert.com/definition/reptile"],
+a[href="https://dictionnaire.lerobert.com/definition/oiseau"],
+a[href="https://dictionnaire.lerobert.com/definition/mammifere"],
+a[href=""],
+a[href=""],
+a[href=""] {
+    color: #dcf6fb;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.arrow__menu {
+    size: 50px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    color: #1e4452;
+}
+
+.homelogo {
+    position: relative;
+    z-index: 10;
+    background: none;
+    background-color: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    cursor: pointer;
 }

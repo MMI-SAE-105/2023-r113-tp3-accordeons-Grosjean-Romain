@@ -8,8 +8,7 @@
   <title>Accordéon horizontal</title>
   <script defer src="https://unpkg.com/alpinejs"></script>
   <link rel="icon" href="../public/icones/accordeon.svg">
-  <link rel="mainsheet" href="../src/css/main.css">
-  <link rel="stylesheet" href="../src/css/style.css">
+  <link rel="stylesheet" href="/src/css/style.css">
   </link>
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -18,17 +17,18 @@
 
 <body>
   <header>
-    <section>
-      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
-        <ul>
-          <li><a href="../index.html">Homepage</a></li>
-          <li><a href="../pages-exo/01-accordeon-booleen.html">Booléen</a></li>
-          <li><a href="../pages-exo/02-accordeon-nombre.html">Nombre</a></li>
-          <li><a href="../pages-exo/03-accordeon-collapse.html">x-collapse</a></li>
-          <li><a href="../pages-exo/05-onglets.html">Onglets</a></li>
-        </ul>
-      </nav>
+    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn"><img
+        src="../public/icones/MdiMenu.svg"></button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
+      <ul>
+        <li class="menu-item"><a href="../index.html">Homepage</a></li>
+        <li class="menu-item"><a href="../pages-exo/01-accordeon-booleen.html">Booléen</a></li>
+        <li class="menu-item"><a href="../pages-exo/02-accordeon-nombre.html">Nombre</a></li>
+        <li class="menu-item"><a href="../pages-exo/03-accordeon-collapse.html">x-collapse</a></li>
+        <li class="menu-item"><a href="../pages-exo/05-onglets.html">Onglets</a></li>
+        <li class="menu-item"><a href="../pages-exo/error404.html">Erreur 404</a></li>
+      </ul>
+    </nav>
     </section>
   </header>
   <h1>Accordéon horizontal</h1>

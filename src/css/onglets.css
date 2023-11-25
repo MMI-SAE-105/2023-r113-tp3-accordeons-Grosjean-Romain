@@ -1,0 +1,43 @@
+#onglets {
+    display: flex;
+    flex-direction: column;
+}
+
+#onglets ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+#onglets ul li {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#onglets ul li.actif {
+    background-color: #ccc;
+}
+
+#onglets div {
+    position: relative;
+    height: 200px;
+    /* Ajustez en fonction de vos besoins */
+    width: 100%;
+    overflow: hidden;
+}
+
+#onglets div div[role="tabpanel"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#onglets div div[role="tabpanel"].actif {
+    opacity: 1;
+}

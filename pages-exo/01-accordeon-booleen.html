@@ -8,61 +8,94 @@
   <title>Accordéon avec des booléens</title>
   <script defer src="https://unpkg.com/alpinejs"></script>
   <link rel="icon" href="../public/icones/accordeon.svg">
-  <link rel="mainsheet" href="../src/css/main.css">
-  <link rel="stylesheet" href="../src/css/style.css">
+  <link rel="stylesheet" href="/src/css/style.css">
   </link>
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
-
 <body>
   <header>
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
+    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn"><img
+        src="/public/icones/MdiMenu.svg"></button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
       <ul>
-        <li><a href="../index.html">Homepage</a></li>
-        <li><a href="../pages-exo/02-accordeon-nombre.html">Nombre</a></li>
-        <li><a href="../pages-exo/03-accordeon-collapse.html">x-collapse</a></li>
-        <li><a href="../pages-exo/04-accordeon-horizontal.html">Horizontal</a></li>
-        <li><a href="../pages-exo/05-onglets.html">Onglets</a></li>
+        <li class="menu-item"><img src="../public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a
+            href="../index.html" class="link-text">Accueil<img src="../public/icones/MdiMenuRight.svg" alt="flèche lien"
+              class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="../public/icones/fruit.svg" alt="Logo" class="logo"><a
+            href="../pages-exo/02-accordeon-nombre.html" class="link-text">Nombre<img
+              src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="../public/icones/saturn.svg" alt="Logo" class="logo"><a
+            href="../pages-exo/03-accordeon-collapse.html" class="link-text">x-collapse<img
+              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="../pages-exo/04-accordeon-horizontal.html" class="link-text">Horizontal<img
+              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="../pages-exo/05-onglets.html" class="link-text">Onglets<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="../public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
+            href="../pages-exo/error404.html" class="link-text">Erreur 404<img src="../public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
       </ul>
     </nav>
-  </header>
+    <aside>
+      <button aria-controls="Homepage" @click="HP = !HP" class="homelogo">
+        <a href="../index.html">
+          <img src="../public/icones/MdiHome.svg" alt="accueil">
+        </a>
+      </button>
+    </aside>
 
-  <div id="Animaux" class="animaux">
-    <h1>Accordéon avec des booléens</h1>
-    <section x-data="{isOpen: false}" class="reptile">
-      <button @click="isOpen = !isOpen">Reptiles</button>
-      <p id="reptile" x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>Lorem
-        ipsum, dolor
-        sit amet consectetur adipisicing elit.
-        Ipsa eveniet accusantium
-        possimus, nihil voluptate
-        voluptates veritatis dignissimos rem at illo assumenda animi eligendi, dolores ullam, quibusdam asperiores quis
-        provident! Non.</p>
-    </section>
-    <section x-data="{isOpen: false}" class="oiseau">
-      <button @click="isOpen = !isOpen">Oiseaux</button>
-      <p id="oiseau" x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms> Sed
-        laborum culpa
-        asperiores, dicta tempora, aut expedita
-        voluptates quis,
-        consequuntur illum minima. Ipsa
-        similique provident cum iusto perspiciatis quasi odio nobis dicta neque laudantium, dolores excepturi pariatur
-        ea id?</p>
-    </section>
-    <section x-data="{isOpen: false}" class="mammifere">
-      <button @click="isOpen = !isOpen">Mammifères</button>
-      <p id="mammifere" x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>>Animi
-        accusamus, numquam vel quis dolores harum
-        laudantium repellat consequuntur
-        quae id reprehenderit quod
-        corporis? Exercitationem hic cumque excepturi, soluta dicta magni voluptate in possimus, tempora natus fugiat,
-        velit explicabo?</p>
-    </section>
-  </div>
+    <div id="Animaux" class="animaux">
+      <h1>Accordéon avec des booléens</h1>
+      <section x-data="{isOpen: false}" class="reptile">
+        <button @click="isOpen = !isOpen">Reptiles</button>
+        <p id="reptile" x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>Animal
+          vertébré, généralement ovipare, à température variable, à respiration pulmonaire, à peau couverte d'écailles
+          (classe des Reptiles; ex. le serpent, le lézard, la tortue, le crocodile). Reptiles fossiles (dinosaure,
+          ptérodactyle). Source : <a href="https://dictionnaire.lerobert.com/definition/reptile" class="nounderline"
+            target="_blank">Le Robert</a>.</p>
+        <section x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>
+          <img class="media media--fullwidth" src="../public/images/animals/reptiles/03084824_1014862.jpg">
+          <img class="media media--fullwidth"
+            src="../public/images/animals/reptiles/iStock-156258354-scaled-758x538.jpg.jpeg">
+          <img class="media media--fullwidth"
+            src="../public/images/animals/reptiles/real_rex_by_arvalis_dewerbx-350t.jpg">
+        </section>
+      </section>
+
+      <section x-data="{isOpen: false}" class="oiseau">
+        <button @click="isOpen = !isOpen">Oiseaux</button>
+        <p id="oiseau" x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>Animal
+          (vertébré à sang chaud) au corps recouvert de plumes, dont les membres antérieurs sont des ailes et qui a un
+          bec. Source : <a href="https://dictionnaire.lerobert.com/definition/oiseau" class="nounderline"
+            target="_blank">Le Robert</a>.</p>
+        <section x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>
+          <img class="media media--fullwidth" src="../public/images/animals/birds/Birds_Culture-1-copy.webp">
+          <img class="media media--fullwidth"
+            src="../public/images/animals/birds/73ee034a-78dc8bd6f229414d953038079e16c96dc8b42cf65fec582939c2af03c8c860a0.jpg">
+          <img class="media media--fullwidth"
+            src="../public/images/animals/birds/an-appetizer-for-archaeopteryx.616a56.jpg">
+        </section>
+      </section>
+
+      <section x-data="{isOpen: false}" class="mammifere">
+        <button @click="isOpen = !isOpen">Mammifères</button>
+        <p id="mammifere" x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>Animal
+          vertébré, à température constante, respirant par des poumons, à système nerveux central développé, dont les
+          femelles portent des mamelles. Source : <a href="https://dictionnaire.lerobert.com/definition/mammifere"
+            class="nounderline" target="_blank">Le Robert</a>.</p>
+        <section x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>
+          <img class="media media--fullwidth" src="../public/images/animals/mammals/mammals-hero_16x9.jpg">
+          <img class="media media--fullwidth"
+            src="../public/images/animals/mammals/LC_20211203_KEN_ExecMALZIMtoAmboseli_013_340704_reduced.jpg">
+          <img class="media media--fullwidth" src="../public/images/animals/mammals/baleine-bosse-saut.jpg">
+        </section>
+      </section>
+    </div>
 </body>
 
 </html>

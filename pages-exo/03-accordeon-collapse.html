@@ -8,8 +8,7 @@
   <title>Accordéon avec x-collapse</title>
   <script defer src="https://unpkg.com/alpinejs"></script>
   <link rel="icon" href="../public/icones/accordeon.svg">
-  <link rel="mainsheet" href="../src/css/main.css">
-  <link rel="stylesheet" href="../src/css/style.css">
+  <link rel="stylesheet" href="/src/css/style.css">
   </link>
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -18,14 +17,16 @@
 
 <body>
   <header>
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
+    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn"><img
+        src="../public/icones/MdiMenu.svg"></button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
       <ul>
-        <li><a href="../index.html">Homepage</a></li>
-        <li><a href="../pages-exo/01-accordeon-booleen.html">Booléen</a></li>
-        <li><a href="../pages-exo/02-accordeon-nombre.html">Nombre</a></li>
-        <li><a href="../pages-exo/04-accordeon-horizontal.html">Horizontal</a></li>
-        <li><a href="../pages-exo/05-onglets.html">Onglets</a>
+        <li class="menu-item"><a href="../index.html">Homepage</a></li>
+        <li class="menu-item"><a href="../pages-exo/01-accordeon-booleen.html">Booléen</a></li>
+        <li class="menu-item"><a href="../pages-exo/02-accordeon-nombre.html">Nombre</a></li>
+        <li class="menu-item"><a href="../pages-exo/04-accordeon-horizontal.html">Horizontal</a></li>
+        <li class="menu-item"><a href="../pages-exo/05-onglets.html">Onglets</a>
+        <li class="menu-item"><a href="../pages-exo/error404.html">Erreur 404</a></li>
       </ul>
     </nav>
   </header>
