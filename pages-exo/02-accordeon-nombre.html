@@ -52,7 +52,7 @@
 
   <main>
     <div x-data="{ isOpen: 0 }">
-      <h1>Accordéon de nombres</h1>
+      <h2>Accordéon de nombres</h2>
       <section>
         <button @click="isOpen = (isOpen === 1) ? 0 : 1">Fruit N°1</button>
         <p x-show="isOpen === 1" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Pastèque

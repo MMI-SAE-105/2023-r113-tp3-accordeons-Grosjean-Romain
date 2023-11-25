@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen:false}">
+<html lang="fr" x-data="{ menuIsOpen: false}" :class="{ noscroll: menuIsOpen }">
 
 <head>
   <meta charset="UTF-8" />
@@ -24,15 +24,19 @@
         <li class="menu-item"><img src="../public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a
             href="../index.html" class="link-text">Accueil<img src="../public/icones/MdiMenuRight.svg" alt="flèche lien"
               class="arrow__menu"></a></li>
+
         <li class="menu-item"><img src="../public/icones/snake.svg" alt="Logo" class="logo"><a
             href="/pages-exo/01-accordeon-booleen.html" class="link-text">Booléen<img
               src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+
         <li class="menu-item"><img src="../public/icones/fruit.svg" alt="Logo" class="logo"><a
             href="/pages-exo/02-accordeon-nombre.html" class="link-text">Nombre<img
               src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+
         <li class="menu-item"><img src="../public/icones/saturn.svg" alt="Logo" class="logo"><a
             href="/pages-exo/03-accordeon-collapse.html" class="link-text">x-collapse<img
               src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+
         <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
             href="/pages-exo/04-accordeon-horizontal.html" class="link-text">Horizontal<img
               src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
@@ -40,7 +44,7 @@
             href="/pages-exo/error404.html" class="link-text">Erreur 404<img src="../public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
       </ul>
-    </nav>
+   </nav>
     <aside>
       <button aria-controls="Homepage" @click="HP = !HP" class="homelogo">
         <a href="../index.html">
@@ -51,30 +55,29 @@
   </header>
 
   <main>
-    <div id="onglets" x-data="{ ouvert: 1 }">
-      <h1>Onglets</h1>
+    <div id="onglets">
+      <h2>Onglets</h2>
       <ul role="tablist">
-        <li role="tab" :class="{ 'actif': ouvert === 1 }" @click="ouvert = 1">Passé</li>
-        <li role="tab" :class="{ 'actif': ouvert === 2 }" @click="ouvert = 2">Présent</li>
-        <li role="tab" :class="{ 'actif': ouvert === 3 }" @click="ouvert = 3">Futur</li>
+        <li role="tab" :class="{ 'actif': ouvert === 8 }" @click="ouvert = 8">Passé</li>
+        <li role="tab" :class="{ 'actif': ouvert === 9 }" @click="ouvert = 9">Présent</li>
+        <li role="tab" :class="{ 'actif': ouvert === 10 }" @click="ouvert = 10">Futur</li>
       </ul>
       <div>
-        <div :class="{ 'active': ouvert === 1 }" class="active" role="tabpanel">
+        <div x-show="ouvert === 8" role="tabpanel">
           <h1>Panneau 1</h1>
           <p>Contenu du panneau 1</p>
         </div>
-        <div :class="{ 'active': ouvert === 2 }" class="active" role="tabpanel">
+        <div x-show="ouvert === 9" role="tabpanel">
           <h1>Panneau 2</h1>
           <p>Contenu du panneau 2</p>
         </div>
-        <div :class="{ 'active': ouvert === 3 }" class="active" role="tabpanel">
+        <div x-show="ouvert === 10" role="tabpanel">
           <h1>Panneau 3</h1>
           <p>Contenu du panneau 3</p>
         </div>
       </div>
     </div>
   </main>
-
 </body>
 
 </html>

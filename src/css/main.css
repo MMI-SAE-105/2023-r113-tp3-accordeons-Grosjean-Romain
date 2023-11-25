@@ -3,6 +3,7 @@
     --secondary-color: #75c0c6;
     --text-color: #dcf6fb;
     --white: #ffffff;
+    --black: #000000;
 }
 
 body {
@@ -55,6 +56,8 @@ img {
 
 .header__menuBtn,
 .homelogo {
+    -webkit-appearance: none;
+    appearance: none;
     position: relative;
     z-index: 10;
     background: none;
@@ -78,6 +81,8 @@ li {
 h1 {
     color: var(--secondary-color);
     font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 35px;
 }
 
 h2 {
@@ -127,7 +132,7 @@ aside {
 
 .link__pages {
     text-decoration: none;
-    color: var(--secondary-color)
+    color: var(--secondary-color);
     font-family: 'Crimson Pro', serif;
     font-size: 16px;
 }
@@ -137,11 +142,11 @@ a[href="https://dictionnaire.lerobert.com/definition/oiseau"],
 a[href="https://dictionnaire.lerobert.com/definition/mammifere"],
 a[href="https://fr.wikipedia.org/wiki/Saturne_(plan%C3%A8te)"],
 a[href="https://www.asc-csa.gc.ca/fra/astronomie/systeme-solaire/saturne.asp"],
-a[href=""], 
-a[href=""],
-a[href=""],
-a[href=""] {
-    color: var(--text-color)
+a[href="https://fr.wikipedia.org/wiki/Terre"],
+a[href="https://www.nationalgeographic.fr/sciences/tout-comprendre-sur-la-planete-terre#:~:text=Troisi%C3%A8me%20plan%C3%A8te%20en%20partant%20du,eau%20liquide%20%C3%A0%20sa%20surface."],
+a[href="https://fr.wikipedia.org/wiki/Mars_(plan%C3%A8te)"],
+a[href="https://www.stelvision.com/astro/que-sait-on-de-mars/"] {
+    color: var(--text-color);
     font-style: italic;
     font-weight: bold;
     text-decoration: none;
@@ -149,7 +154,6 @@ a[href=""] {
 
 .arrow,
 .arrow__menu {
-    
     display: flex;
     align-items: center;
     margin-right: 10px;
@@ -161,4 +165,89 @@ a[href=""] {
     width: 50px;
     height: 50px;
     color: var(--primary-color)
+}
+
+body.error-page {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+body.error-page .header__menuBtn {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    z-index: 10;
+    background: none;
+    background-color: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+body.error-page .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--secondary-color);
+    display: grid;
+    place-content: center;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+body.error-page .error-container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 15px var(--black);
+    max-width: 400px;
+    width: 100%;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+body.error-page h2 {
+    color: var(--white);
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+body.error-page p {
+    font-size: 1.2em;
+    margin: 0px 0;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logoerror {
+    margin: 30;
+    padding: 30;
+    height: 1.2em;
+    margin-right: 30px;
 }

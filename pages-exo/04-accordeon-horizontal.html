@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen:false}">
+<html lang="fr" x-data="{menuIsOpen:false}" :class="{noscroll:menuIsOpen}">
 
 <head>
   <meta charset="UTF-8" />
@@ -50,13 +50,42 @@
     </aside>
   </header>
 
-
-
   <main>
-    <h1>Accordéon horizontal</h1>
+    <h2>Accordéon horizontal</h2>
+    <ul id="accordeon">
+      <li :class="{ actif: isOpen === 1 }">
+        <figure>
+          <img src="https://picsum.photos/100?random=1" alt="image 1" width="102">
+          <figcaption>
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </figcaption>
+        </figure>
+      </li>
 
+      <li :class="{ actif: isOpen === 2 }">
+        <figure>
+          <img src="https://picsum.photos/100?random=2" alt="image 2" width="102">
+          <figcaption>
+            <h3>Ratione, molestiae eos?</h3>
+            <p>Accusantium sequi eos quasi vero. Consectetur.</p>
+          </figcaption>
+        </figure>
+      </li>
 
+      <li :class="{ actif: isOpen === 3 }">
+        <figure>
+          <img src="https://picsum.photos/100?random=3" alt="image 3" width="102">
+          <figcaption>
+            <h3>Fugiat, totam voluptate?</h3>
+            <p>Pariatur tempore obcaecati officiis? Voluptatum, nesciunt.</p>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
   </main>
+
+
 </body>
 
 </html>

@@ -1,16 +1,17 @@
 #accordeon {
     display: flex;
+    overflow: hidden;
     list-style: none;
+    padding: 0;
 }
 
 #accordeon li {
     width: 107px;
     overflow: hidden;
     transition: width 0.5s;
-    background-color: #eee;
+    background-color: var(--secondary-color);
     margin-right: 3px;
     border-radius: 5px;
-    padding: 5px;
 }
 
 #accordeon li.actif {
@@ -19,6 +20,8 @@
 
 #accordeon li figure {
     display: flex;
+    margin: 0;
+    width: 317px;
 }
 
 #accordeon li figure figcaption {
@@ -28,7 +31,7 @@
     flex-direction: column;
 }
 
-#accordeon li figure figcaption>* {
+#accordeon li figure figcaption >* {
     margin: 0;
     padding: 0;
 }

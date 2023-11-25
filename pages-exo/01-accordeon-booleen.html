@@ -52,7 +52,7 @@
 
   <main>
     <div id="Animaux" class="animaux">
-      <h1>Accordéon avec des booléens</h1>
+      <h2>Accordéon avec des booléens</h2>
       <section x-data="{isOpen: false}" class="reptile">
         <button @click="isOpen = !isOpen">Reptiles</button>
         <p id="reptile" x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>Animal
