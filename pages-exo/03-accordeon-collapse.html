@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen:false}" :class="{noscroll:menuIsOpen}">
+<html lang="fr" x-data="{ menuIsOpen: false, expanded: false }" :class="{ noscroll: menuIsOpen }">
 
 <head>
   <meta charset="UTF-8" />
@@ -25,19 +25,19 @@
             href="../index.html" class="link-text">Accueil<img src="../public/icones/MdiMenuRight.svg" alt="flèche lien"
               class="arrow__menu"></a></li>
         <li class="menu-item"><img src="../public/icones/snake.svg" alt="Logo" class="logo"><a
-            href="../pages-exo/01-accordeon-booleen.html" class="link-text">Booléen<img
+            href="/pages-exo/01-accordeon-booleen.html" class="link-text">Booléen<img
               src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="../public/icones/fruit.svg" alt="Logo" class="logo"><a
-            href="../pages-exo/02-accordeon-nombre.html" class="link-text">Nombre<img
+            href="/pages-exo/02-accordeon-nombre.html" class="link-text">Nombre<img
               src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="../pages-exo/04-accordeon-horizontal.html" class="link-text">Horizontal<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            href="/pages-exo/04-accordeon-horizontal.html" class="link-text">Horizontal<img
+              src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="../pages-exo/05-onglets.html" class="link-text">Onglets<img src="/public/icones/MdiMenuRight.svg"
+            href="/pages-exo/05-onglets.html" class="link-text">Onglets<img src="../public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="../public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
-            href="../pages-exo/error404.html" class="link-text">Erreur 404<img src="../public/icones/MdiMenuRight.svg"
+            href="/pages-exo/error404.html" class="link-text">Erreur 404<img src="../public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
       </ul>
     </nav>
@@ -53,10 +53,10 @@
   <main>
     <div id="Planet" class="planet">
       <h1>Accordéon avec <code>x-collapse</code></h1>
-      <section x-data="{ isOpen: false }" class="terre">
+      <section>
         <h2>Terre</h2>
-        <button @click="isOpen = ! isOpen">Terre</button>
-        <p id="Terre" x-show="isOpen" x-collapse>Lorem
+        <button @click="expanded = !expanded">Terre</button>
+        <p id="Terre" x-show="expanded" x-collapse.duration.1000ms>Lorem
           ipsum, dolor
           sit amet consectetur adipisicing elit.
           Ipsa eveniet accusantium
@@ -65,10 +65,11 @@
           quis
           provident! Non.</p>
       </section>
-      <section x-data="{ isOpen: false}" class="mars">
+
+      <section>
         <h2>Mars</h2>
-        <button @click="isOpen = ! isOpen">Mars</button>
-        <p id="Mars" x-show="isOpen" x-collapse> Sed
+        <button @click="expanded = !expanded">Mars</button>
+        <p id="Mars" x-show="expanded" x-collapse.duration.1000ms>Sed
           laborum culpa
           asperiores, dicta tempora, aut expedita
           voluptates quis,
@@ -76,17 +77,27 @@
           similique provident cum iusto perspiciatis quasi odio nobis dicta neque laudantium, dolores excepturi pariatur
           ea id?</p>
       </section>
-      <section x-data="{ isOpen: false }" class="saturne">
+
+      <section>
         <h2>Saturne</h2>
-        <button @click="isOpen = ! isOpen">Saturne</button>
-        <p id="Saturne" x-show="isOpen" x-collapse>Animi
-          accusamus, numquam vel quis dolores harum
-          laudantium repellat consequuntur
-          quae id reprehenderit quod
-          corporis? Exercitationem hic cumque excepturi, soluta dicta magni voluptate in possimus, tempora natus fugiat,
-          velit explicabo?</p>
+        <button @click="expanded = !expanded">Saturne</button>
+        <p id="Saturne" x-show="expanded" x-collapse.duration.1000ms>Saturne est la sixième planète à partir du Soleil.
+          Après Jupiter, c'est la plus grosse planète du Système solaire. Comme
+          toutes les autres planètes, Saturne s'est probablement formée dans un grand nuage de gaz, de poussière et de
+          glace. Celui-ci s'est aplati en un disque en rotation. Sources : <a
+            href="https://fr.wikipedia.org/wiki/Saturne_(plan%C3%A8te)" class="nounderline"
+            target="_blank">Wikipédia</a> et <a
+            href="https://www.asc-csa.gc.ca/fra/astronomie/systeme-solaire/saturne.asp" class="nounderline"
+            target="_blank">l'Agence spatiale canadienne</a>.</p>
+        <section x-show="isOpen" x-transition:enter.duration.800ms x-transition:leave.duration.800ms>
+          <img class="media media--fullwidth" src="../public/images/planets/saturn/1.jpg">
+          <img class="media media--fullwidth" src="../public/images/planets/saturn/2.jpg">
+          <img class="media media--fullwidth" src="../public/images/planets/saturn/3.jpg">
+        </section>
       </section>
     </div>
   </main>
+
+</body>
 
 </html>

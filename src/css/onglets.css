@@ -13,18 +13,18 @@
     cursor: pointer;
     padding: 10px;
     margin: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary-color);
     border-radius: 5px;
 }
 
 #onglets ul li.actif {
-    background-color: #ccc;
+    background-color: var(--text-color);
+    border: var(--text-color);
 }
 
 #onglets div {
     position: relative;
     height: 200px;
-    /* Ajustez en fonction de vos besoins */
     width: 100%;
     overflow: hidden;
 }

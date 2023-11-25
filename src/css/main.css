@@ -127,7 +127,7 @@ aside {
 
 .link__pages {
     text-decoration: none;
-    color: #75c0c6;
+    color: var(--secondary-color)
     font-family: 'Crimson Pro', serif;
     font-size: 16px;
 }
@@ -135,10 +135,13 @@ aside {
 a[href="https://dictionnaire.lerobert.com/definition/reptile"],
 a[href="https://dictionnaire.lerobert.com/definition/oiseau"],
 a[href="https://dictionnaire.lerobert.com/definition/mammifere"],
+a[href="https://fr.wikipedia.org/wiki/Saturne_(plan%C3%A8te)"],
+a[href="https://www.asc-csa.gc.ca/fra/astronomie/systeme-solaire/saturne.asp"],
+a[href=""], 
 a[href=""],
 a[href=""],
 a[href=""] {
-    color: #dcf6fb;
+    color: var(--text-color)
     font-style: italic;
     font-weight: bold;
     text-decoration: none;
