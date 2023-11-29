@@ -7,13 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordéon avec x-collapse</title>
-  <script defer src="https://unpkg.com/alpinejs"></script>
   <link rel="icon" href="../public/icones/accordeon.svg">
   <link rel="stylesheet" href="/src/css/style.css">
   </link>
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://unpkg.com/alpinejs"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
 <body>
@@ -75,11 +73,14 @@
       <section>
         <h2>Mars</h2>
         <button @click="expanded2 = !expanded2">En voir +</button>
-        <p id="Mars" x-show="expanded2" x-collapse.duration.1000ms>Mars est une planète tellurique, c'est-à-dire rocheuse, dix fois moins massive que la Terre. Vue de la Planète bleue,
-        elle apparaît rougeâtre de part la poussière riche en oxyde de fer qui recouvre sa surface. Une fois hydraté, l'oxyde de
-        fer devient rouille, d'où la couleur ocrée de notre planète voisine. Sources : <a href="https://fr.wikipedia.org/wiki/Mars_(plan%C3%A8te)" class="nounderline" target="_blank">Wikipédia</a> et <a
-          href="https://www.stelvision.com/astro/que-sait-on-de-mars/" class="nounderline"
-          target="_blank">Stelvision</a>.</p>
+        <p id="Mars" x-show="expanded2" x-collapse.duration.1000ms>Mars est une planète tellurique, c'est-à-dire
+          rocheuse, dix fois moins massive que la Terre. Vue de la Planète bleue,
+          elle apparaît rougeâtre de part la poussière riche en oxyde de fer qui recouvre sa surface. Une fois hydraté,
+          l'oxyde de
+          fer devient rouille, d'où la couleur ocrée de notre planète voisine. Sources : <a
+            href="https://fr.wikipedia.org/wiki/Mars_(plan%C3%A8te)" class="nounderline" target="_blank">Wikipédia</a>
+          et <a href="https://www.stelvision.com/astro/que-sait-on-de-mars/" class="nounderline"
+            target="_blank">Stelvision</a>.</p>
         <section x-show="expanded2" x-collapse.opacity.80000ms>
           <img class="media media--fullwidth" src="../public/images/planets/mars/1.jpg">
           <img class="media media--fullwidth" src="../public/images/planets/mars/2.jpg">
@@ -109,7 +110,7 @@
 
 
 
-  
+
 </body>
 
 </html>
