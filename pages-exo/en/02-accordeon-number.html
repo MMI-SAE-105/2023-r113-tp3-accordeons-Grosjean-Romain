@@ -8,8 +8,8 @@
   <title>Accordion memorising the open element by a number</title>
   <link rel="icon" href="/public/icones/accordeon.svg">
   <link rel="stylesheet" href="/src/css/style.css">
-  </link>
   <link rel="alternate" hreflang="en" href="/pages-exo/en/02-accordeon-number.html">
+  </link>
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
@@ -20,24 +20,24 @@
         src="/public/icones/MdiMenu.svg"></button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
       <ul>
-        <li class="menu-item"><img src="/public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a
-            href="index.html" class="link-text">Homepage<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
+        <li class="menu-item"><img src="/public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a href="index.html"
+            class="link-text">Homepage<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
               class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/snake.svg" alt="Logo" class="logo"><a
-            href="01-accordeon-boolean.html" class="link-text">Boolean<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            href="01-accordeon-boolean.html" class="link-text">Boolean<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/saturn.svg" alt="Logo" class="logo"><a
-            href="03-accordeon-collapse.html" class="link-text">x-collapse<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="04-accordeon-horizontal.html" class="link-text">Horizontal<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="05-tabs.html" class="link-text">Tabs<img src="/public/icones/MdiMenuRight.svg"
+            href="03-accordeon-collapse.html" class="link-text">x-collapse<img src="/public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="04-accordeon-horizontal.html" class="link-text">Horizontal<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="05-tabs.html" class="link-text">Tabs<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
+              class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
-            href="error404.html" class="link-text">Error 404<img src="/public/icones/MdiMenuRight.svg"
-              alt="flèche lien" class="arrow__menu"></a></li>
+            href="error404.html" class="link-text">Error 404<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
+              class="arrow__menu"></a></li>
       </ul>
     </nav>
     <aside>
@@ -55,7 +55,8 @@
       <h2>Accordion of numbers</h2>
       <section>
         <button @click="isOpen = (isOpen === 1) ? 0 : 1">Fruit No. 1</button>
-        <p x-show="isOpen === 1" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Watermelon
+        <p x-show="isOpen === 1" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>
+          Watermelon
         </p>
         <section x-show="isOpen === 1" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>
           <img class="media media--fullwidth" src="/public/images/fruits/pasteque.jpg">
@@ -78,7 +79,8 @@
       </section>
       <section>
         <button @click="isOpen = (isOpen === 4) ? 0 : 4">Fruit No. 4</button>
-        <p x-show="isOpen === 4" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Strawberry
+        <p x-show="isOpen === 4" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>
+          Strawberry
         </p>
         <section x-show="isOpen === 4" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>
           <img class="media media--fullwidth" src="/public/images/fruits/fraises.jpg">
