@@ -1,16 +1,23 @@
+.ouvert {
+    background-color: var(--secondary-color);
+    color: var(--text);
+}
+
 #accordeon {
     display: flex;
     overflow: hidden;
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 
 #accordeon li {
     width: 107px;
     overflow: hidden;
-    transition: width 0.5s;
+    transition: width 1s;
     background-color: var(--secondary-color);
     margin-right: 3px;
+    padding: 5px;
     border-radius: 5px;
 }
 
@@ -29,9 +36,10 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-#accordeon li figure figcaption >* {
+#accordeon li figure figcaption>* {
     margin: 0;
     padding: 0;
 }
