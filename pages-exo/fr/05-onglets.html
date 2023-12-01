@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{ menuIsOpen: false, ouvert: 1 }" :class="{ noscroll: menuIsOpen }">
+<html lang="fr" x-data="{ menuIsOpen: false}" :class="{ noscroll: menuIsOpen }">
 
 <head>
   <meta charset="UTF-8" />
@@ -20,25 +20,25 @@
         src="/public/icones/MdiMenu.svg"></button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
       <ul>
-        <li class="menu-item"><img src="/public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a
-            href="index.html" class="link-text">Accueil<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
+        <li class="menu-item"><img src="/public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a href="index.html"
+            class="link-text">Accueil<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
               class="arrow__menu"></a></li>
 
         <li class="menu-item"><img src="/public/icones/snake.svg" alt="Logo" class="logo"><a
-            href="01-accordeon-booleen.html" class="link-text">Booléen<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            href="01-accordeon-booleen.html" class="link-text">Booléen<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
 
         <li class="menu-item"><img src="/public/icones/fruit.svg" alt="Logo" class="logo"><a
-            href="02-accordeon-nombre.html" class="link-text">Nombre<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            href="02-accordeon-nombre.html" class="link-text">Nombre<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
 
         <li class="menu-item"><img src="/public/icones/saturn.svg" alt="Logo" class="logo"><a
-            href="03-accordeon-collapse.html" class="link-text">x-collapse<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            href="03-accordeon-collapse.html" class="link-text">x-collapse<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
 
         <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="04-accordeon-horizontal.html" class="link-text">Horizontal<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            href="04-accordeon-horizontal.html" class="link-text">Horizontal<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
             href="erreur404.html" class="link-text">Erreur 404<img src="/public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
@@ -55,25 +55,28 @@
 
   <main>
     <a href="/pages-exo/en/05-tabs.html"><button>EN</button></a>
-    <div id="onglets">
-      <h2>Onglets</h2>
+    <h2>Onglets</h2>
+    <div id="onglets" x-data="{estOuvert:1}">
       <ul role="tablist">
-        <li role="tab" :class="{ 'actif': ouvert === 1 }" @click="ouvert = 1">Passé</li>
-        <li role="tab" :class="{ 'actif': ouvert === 2 }" @click="ouvert = 2">Présent</li>
-        <li role="tab" :class="{ 'actif': ouvert === 3 }" @click="ouvert = 3">Futur</li>
+        <li role="tab" :class="{ 'actif': estOuvert === 1 }" @click="estOuvert = 1">Passé</li>
+        <li role="tab" :class="{ 'actif': estOuvert === 2 }" @click="estOuvert = 2">Présent</li>
+        <li role="tab" :class="{ 'actif': estOuvert === 3 }" @click="estOuvert = 3">Futur</li>
       </ul>
       <div>
-        <div x-show="ouvert === 1" role="tabpanel">
+        <div :class="{'actif': estOuvert === 1}" class="actif" role="tabpanel">
           <h1>Panneau 1</h1>
           <p>Contenu du panneau 1</p>
+          <img src="/public/images/time/time1.jpg">
         </div>
-        <div x-show="ouvert === 2" role="tabpanel">
+        <div :class="{'actif': estOuvert === 2}" class="actif" role="tabpanel">
           <h1>Panneau 2</h1>
           <p>Contenu du panneau 2</p>
+          <img src="/public/images/time/time2.webp">
         </div>
-        <div x-show="ouvert === 3" role="tabpanel">
+        <div :class="{'actif': estOuvert === 3}" class="actif" role="tabpanel">
           <h1>Panneau 3</h1>
           <p>Contenu du panneau 3</p>
+          <img src="/public/images/time/time3.webp">
         </div>
       </div>
     </div>
