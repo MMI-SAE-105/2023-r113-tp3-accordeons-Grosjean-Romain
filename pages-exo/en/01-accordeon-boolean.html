@@ -9,6 +9,7 @@
   <link rel="icon" href="/public/icones/accordeon.svg">
   <link rel="stylesheet" href="/src/css/style.css">
   </link>
+  <link rel="alternate" hreflang="en" href="/pages-exo/en/01-accordeon-boolean.html">
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
@@ -23,32 +24,33 @@
             href="index.html" class="link-text">Homepage<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
               class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/fruit.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/en/02-accordeon-number.html" class="link-text">Number<img
+            href="02-accordeon-number.html" class="link-text">Number<img
               src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/saturn.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/en/03-accordeon-collapse.html" class="link-text">x-collapse<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/en/04-accordeon-horizontal.html" class="link-text">Horizontal<img
+            href="03-accordeon-collapse.html" class="link-text">x-collapse<img
               src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/en/05-tabs.html" class="link-text">Tabs<img src="/public/icones/MdiMenuRight.svg"
+            href="04-accordeon-horizontal.html" class="link-text">Horizontal<img
+              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="05-tabs.html" class="link-text">Tabs<img src="/public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/en/error404.html" class="link-text">Error 404<img src="/public/icones/MdiMenuRight.svg"
+            href="error404.html" class="link-text">Error 404<img src="/public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
       </ul>
     </nav>
     <aside>
       <button aria-controls="Homepage" @click="HP = !HP" class="homelogo">
         <a href="index.html">
-          <img src="public/icones/MdiHome.svg" alt="accueil">
+          <img src="/public/icones/MdiHome.svg" alt="accueil">
         </a>
       </button>
     </aside>
   </header>
 
   <main>
+    <a href="/pages-exo/fr/01-accordeon-booleen.html"><button>FR</button></a>
     <div id="Animaux" class="animaux">
       <h2>Accordion with Booleans</h2>
       <section x-data="{isOpen: false}" class="reptile">

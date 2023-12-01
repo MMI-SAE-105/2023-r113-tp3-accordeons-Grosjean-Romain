@@ -6,12 +6,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accordéon avec x-collapse</title>
-  <link rel="icon" href="../public/icones/accordeon.svg">
+  <title>Accordion with x-collapse</title>
+  <link rel="icon" href="/public/icones/accordeon.svg">
   <link rel="stylesheet" href="/src/css/style.css">
   </link>
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-<script defer src="https://unpkg.com/alpinejs"></script>
+  <link rel="alternate" hreflang="en" href="/pages-exo/en/03-accordeon-collapse.html">
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
 <body>
@@ -20,88 +21,91 @@
         src="/public/icones/MdiMenu.svg"></button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
       <ul>
-        <li class="menu-item"><img src="/public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a
-            href="index.html" class="link-text">Accueil<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
+        <li class="menu-item"><img src="/public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a href="index.html"
+            class="link-text">Homepage<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
               class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/snake.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/01-accordeon-booleen.html" class="link-text">Booléen<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            href="01-accordeon-boolean.html" class="link-text">Booleen<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/fruit.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/02-accordeon-nombre.html" class="link-text">Number<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/04-accordeon-horizontal.html" class="link-text">Horizontal<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/05-onglets.html" class="link-text">Onglets<img src="/public/icones/MdiMenuRight.svg"
+            href="02-accordeon-number.html" class="link-text">Number<img src="/public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="04-accordeon-horizontal.html" class="link-text">Horizontal<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="05-tabs.html" class="link-text">Tabs<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
+              class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/error404.html" class="link-text">Erreur 404<img src="/public/icones/MdiMenuRight.svg"
-              alt="flèche lien" class="arrow__menu"></a></li>
+            href="error404.html" class="link-text">Error 404<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
+              class="arrow__menu"></a></li>
       </ul>
     </nav>
     <aside>
       <button aria-controls="Homepage" @click="HP = !HP" class="homelogo">
         <a href="index.html">
-          <img src="public/icones/MdiHome.svg" alt="accueil">
+          <img src="/public/icones/MdiHome.svg" alt="accueil">
         </a>
       </button>
     </aside>
   </header>
 
   <main>
+    <a href="/pages-exo/fr/03-accordeon-collapse.html"><button>FR</button></a>
     <div id="Planet" class="planet">
-      <h2>Accordéon avec <code>x-collapse</code></h2>
+      <h2>Accordion with <code>x-collapse</code></h2>
 
       <section>
-        <h2>Terre</h2>
-        <button @click="expanded1 = !expanded1">En voir +</button>
-        <p id="Terre" x-show="expanded1" x-collapse.duration.1000ms>Troisième planète en partant du soleil, la Terre est
-          le seul endroit de l'univers connu dont il est confirmé qu'il
-          abrite la vie. Avec un rayon de 5 000 km, la Terre est la cinquième plus grande planète de notre système
-          solaire, et c'est la seule dont on est sûr qu'elle possède de l'eau liquide à sa surface. Sources : <a
-            href="https://fr.wikipedia.org/wiki/Terre" class="nounderline" target="_blank">Wikipédia</a> et <a
+        <h2>Earth</h2>
+        <button @click="expanded1 = !expanded1">See more ?</button>
+        <p id="Terre" x-show="expanded1" x-collapse.duration.1000ms>The third planet from the sun, Earth is the only
+          place in the known universe confirmed to harbour life. With a radius of
+          5,000 km, the Earth is the fifth largest planet in our solar system, and the only one that is certain to have
+          liquid
+          water on its surface. Sources : <a href="https://fr.wikipedia.org/wiki/Terre" class="nounderline"
+            target="_blank">Wikipedia</a> and <a
             href="https://www.nationalgeographic.fr/sciences/tout-comprendre-sur-la-planete-terre#:~:text=Troisi%C3%A8me%20plan%C3%A8te%20en%20partant%20du,eau%20liquide%20%C3%A0%20sa%20surface."
             class="nounderline" target="_blank">National Geographic</a>.</p>
         <section x-show="expanded1" x-collapse.opacity.80000ms>
-          <img class="media media--fullwidth" src="../public/images/planets/earth/1.jpg">
-          <img class="media media--fullwidth" src="../public/images/planets/earth/2.jpg">
-          <img class="media media--fullwidth" src="../public/images/planets/earth/3.jpg">
+          <img class="media media--fullwidth" src="/public/images/planets/earth/1.jpg">
+          <img class="media media--fullwidth" src="/public/images/planets/earth/2.jpg">
+          <img class="media media--fullwidth" src="/public/images/planets/earth/3.jpg">
         </section>
       </section>
 
       <section>
         <h2>Mars</h2>
-        <button @click="expanded2 = !expanded2">En voir +</button>
-        <p id="Mars" x-show="expanded2" x-collapse.duration.1000ms>Mars est une planète tellurique, c'est-à-dire
-          rocheuse, dix fois moins massive que la Terre. Vue de la Planète bleue,
-          elle apparaît rougeâtre de part la poussière riche en oxyde de fer qui recouvre sa surface. Une fois hydraté,
-          l'oxyde de
-          fer devient rouille, d'où la couleur ocrée de notre planète voisine. Sources : <a
-            href="https://fr.wikipedia.org/wiki/Mars_(plan%C3%A8te)" class="nounderline" target="_blank">Wikipédia</a>
-          et <a href="https://www.stelvision.com/astro/que-sait-on-de-mars/" class="nounderline"
+        <button @click="expanded2 = !expanded2">See more ?</button>
+        <p id="Mars" x-show="expanded2" x-collapse.duration.1000ms>Mars is a telluric planet, i.e. rocky. ten times less
+          massive than Earth. View of the Blue Planet, it appears reddish
+          due to the iron oxide-rich dust that covers its surface. Once hydrated the iron oxide becomes rusty, hence the
+          ochre
+          colour of our neighbouring planet. Sources : <a href="https://fr.wikipedia.org/wiki/Mars_(plan%C3%A8te)"
+            class="nounderline" target="_blank">Wikipedia</a>
+          and <a href="https://www.stelvision.com/astro/que-sait-on-de-mars/" class="nounderline"
             target="_blank">Stelvision</a>.</p>
         <section x-show="expanded2" x-collapse.opacity.80000ms>
-          <img class="media media--fullwidth" src="../public/images/planets/mars/1.jpg">
-          <img class="media media--fullwidth" src="../public/images/planets/mars/2.jpg">
-          <img class="media media--fullwidth" src="../public/images/planets/mars/3.jpg">
+          <img class="media media--fullwidth" src="/public/images/planets/mars/1.jpg">
+          <img class="media media--fullwidth" src="/public/images/planets/mars/2.jpg">
+          <img class="media media--fullwidth" src="/public/images/planets/mars/3.jpg">
         </section>
       </section>
 
       <section>
-        <h2>Saturne</h2>
-        <button @click="expanded3 = !expanded3">En voir +</button>
-        <p id="Saturne" x-show="expanded3" x-collapse.duration.1000ms>Saturne est la sixième planète à partir du
-          Soleil. Après Jupiter, c'est la plus grosse planète du Système solaire. Comme toutes les autres planètes,
-          Saturne s'est probablement formée dans un grand nuage de gaz, de poussière et de glace. Celui-ci s'est aplati
-          en un disque en rotation. Sources : <a href="https://fr.wikipedia.org/wiki/Saturne_(plan%C3%A8te)"
-            class="nounderline" target="_blank">Wikipédia</a> et <a
+        <h2>Saturn</h2>
+        <button @click="expanded3 = !expanded3">See more ?</button>
+        <p id="Saturne" x-show="expanded3" x-collapse.duration.1000ms>Saturn is the sixth planet from the Sun. After
+          Jupiter, it is the largest planet in the Solar System. Like all the other
+          planets, Saturn probably formed in a large cloud of gas, dust and ice. This cloud flattened out into a
+          rotating disc.
+          Sources : <a href="https://fr.wikipedia.org/wiki/Saturne_(plan%C3%A8te)" class="nounderline"
+            target="_blank">Wikipedia</a> and the <a
             href="https://www.asc-csa.gc.ca/fra/astronomie/systeme-solaire/saturne.asp" class="nounderline"
-            target="_blank">l'Agence spatiale canadienne</a>.</p>
+            target="_blank">Canadian Space Agency</a>.</p>
         <section x-show="expanded3" x-collapse.opacity.80000ms>
-          <img class="media media--fullwidth" src="../public/images/planets/saturn/1.jpg">
-          <img class="media media--fullwidth" src="../public/images/planets/saturn/2.jpg">
-          <img class="media media--fullwidth" src="../public/images/planets/saturn/3.jpg">
+          <img class="media media--fullwidth" src="/public/images/planets/saturn/1.jpg">
+          <img class="media media--fullwidth" src="/public/images/planets/saturn/2.jpg">
+          <img class="media media--fullwidth" src="/public/images/planets/saturn/3.jpg">
         </section>
       </section>
     </div>

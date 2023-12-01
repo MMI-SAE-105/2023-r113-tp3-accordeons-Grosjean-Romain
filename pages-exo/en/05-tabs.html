@@ -5,10 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Onglets</title>
-  <link rel="icon" href="../public/icones/accordeon.svg">
+  <title>Tabs</title>
+  <link rel="icon" href="/public/icones/accordeon.svg">
   <link rel="stylesheet" href="/src/css/style.css">
   </link>
+  <link rel="alternate" hreflang="en" href="/pages-exo/en/05-tabs.html">
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
@@ -20,58 +21,59 @@
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
       <ul>
         <li class="menu-item"><img src="/public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a
-            href="index.html" class="link-text">Accueil<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
+            href="index.html" class="link-text">Homepage<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
               class="arrow__menu"></a></li>
 
         <li class="menu-item"><img src="/public/icones/snake.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/en/01-accordeon-boolean.html" class="link-text">Booléen<img
+            href="01-accordeon-boolean.html" class="link-text">Boolean<img
               src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
 
         <li class="menu-item"><img src="/public/icones/fruit.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/en/02-accordeon-number.html" class="link-text">Number<img
-              src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+            href="02-accordeon-number.html" class="link-text">Number<img
+              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
 
         <li class="menu-item"><img src="/public/icones/saturn.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/en/03-accordeon-collapse.html" class="link-text">x-collapse<img
+            href="03-accordeon-collapse.html" class="link-text">x-collapse<img
               src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
 
-        <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/en/04-accordeon-horizontal.html" class="link-text">Horizontal<img
+        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="04-accordeon-horizontal.html" class="link-text">Horizontal<img
               src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
         <li class="menu-item"><img src="/public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/error404.html" class="link-text">Erreur 404<img src="/public/icones/MdiMenuRight.svg"
+            href="error404.html" class="link-text">Error 404<img src="/public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
       </ul>
     </nav>
     <aside>
       <button aria-controls="Homepage" @click="HP = !HP" class="homelogo">
-        <a href="../index.html">
-          <img src="../public/icones/MdiHome.svg" alt="accueil">
+        <a href="index.html">
+          <img src="/public/icones/MdiHome.svg" alt="accueil">
         </a>
       </button>
     </aside>
   </header>
 
   <main>
+    <a href="/pages-exo/fr/05-onglets.html"><button>FR</button></a>
     <div id="onglets">
-      <h2>Onglets</h2>
+      <h2>Tabs</h2>
       <ul role="tablist">
-        <li role="tab" :class="{ 'actif': ouvert === 1 }" @click="ouvert = 1">Passé</li>
-        <li role="tab" :class="{ 'actif': ouvert === 2 }" @click="ouvert = 2">Présent</li>
+        <li role="tab" :class="{ 'actif': ouvert === 1 }" @click="ouvert = 1">Past</li>
+        <li role="tab" :class="{ 'actif': ouvert === 2 }" @click="ouvert = 2">Present</li>
         <li role="tab" :class="{ 'actif': ouvert === 3 }" @click="ouvert = 3">Futur</li>
       </ul>
       <div>
         <div x-show="ouvert === 1" role="tabpanel">
-          <h1>Panneau 1</h1>
-          <p>Contenu du panneau 1</p>
+          <h1>Panel 1</h1>
+          <p>Content of panel 1</p>
         </div>
         <div x-show="ouvert === 2" role="tabpanel">
-          <h1>Panneau 2</h1>
-          <p>Contenu du panneau 2</p>
+          <h1>Panel 2</h1>
+          <p>Content of panel 2</p>
         </div>
         <div x-show="ouvert === 3" role="tabpanel">
-          <h1>Panneau 3</h1>
-          <p>Contenu du panneau 3</p>
+          <h1>Panel 3</h1>
+          <p>Content of panel 3</p>
         </div>
       </div>
     </div>
