@@ -251,3 +251,10 @@ body.error-page p {
     height: 1.2em;
     margin-right: 30px;
 }
+
+.error-text {
+    margin: 0px 0;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
