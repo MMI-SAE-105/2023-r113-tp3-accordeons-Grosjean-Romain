@@ -8,38 +8,48 @@
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #onglets ul li {
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 15px;
     margin: 5px;
     border: 1px solid var(--secondary-color);
-    border-radius: 5px;
+    background-color: var(--secondary-color);
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 #onglets ul li.actif {
     background-color: var(--text-color);
-    border: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    border: none;
 }
 
 #onglets div {
+    border: 1px solid var(--white);
+    padding: 20px;
     position: relative;
     height: 200px;
     width: 100%;
     overflow: hidden;
 }
 
-#onglets div div[role="tabpanel"] {
+#onglets div>div {
+    display: none;
     opacity: 0;
     position: absolute;
     height: auto;
     top: 0;
     left: 0;
     width: 100%;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s ease;
 }
 
-#onglets div div[role="tabpanel"].actif {
+#onglets div>div.actif {
+    display: block;
     opacity: 1;
 }
