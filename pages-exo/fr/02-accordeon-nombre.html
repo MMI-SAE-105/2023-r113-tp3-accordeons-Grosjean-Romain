@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
-  <link rel="icon" href="../public/icones/accordeon.svg">
+  <link rel="icon" href="/public/icones/accordeon.svg">
   <link rel="stylesheet" href="/src/css/style.css">
   <link rel="alternate" hreflang="en" href="/pages-exo/fr/02-accordeon-nombre.html">
   </link>
@@ -20,36 +20,37 @@
         src="/public/icones/MdiMenu.svg"></button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
       <ul>
-        <li class="menu-item"><img src="../public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a
-            href="../index.html" class="link-text">Accueil<img src="../public/icones/MdiMenuRight.svg" alt="flèche lien"
+        <li class="menu-item"><img src="/public/icones/MdiHomemenu.svg" alt="Logo" class="logo"><a
+            href="index.html" class="link-text">Accueil<img src="/public/icones/MdiMenuRight.svg" alt="flèche lien"
               class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="../public/icones/snake.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/01-accordeon-booleen.html" class="link-text">Booléen<img
-              src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="../public/icones/saturn.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/03-accordeon-collapse.html" class="link-text">x-collapse<img
-              src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/04-accordeon-horizontal.html" class="link-text">Horizontal<img
-              src="../public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="../public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/05-onglets.html" class="link-text">Onglets<img src="../public/icones/MdiMenuRight.svg"
+        <li class="menu-item"><img src="/public/icones/snake.svg" alt="Logo" class="logo"><a
+            href="01-accordeon-booleen.html" class="link-text">Booléen<img
+              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="/public/icones/saturn.svg" alt="Logo" class="logo"><a
+            href="03-accordeon-collapse.html" class="link-text">x-collapse<img
+              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="04-accordeon-horizontal.html" class="link-text">Horizontal<img
+              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
+        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
+            href="05-onglets.html" class="link-text">Onglets<img src="/public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="../public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/error404.html" class="link-text">Erreur 404<img src="../public/icones/MdiMenuRight.svg"
+        <li class="menu-item"><img src="/public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
+            href="erreur404.html" class="link-text">Erreur 404<img src="/public/icones/MdiMenuRight.svg"
               alt="flèche lien" class="arrow__menu"></a></li>
       </ul>
     </nav>
     <aside>
       <button aria-controls="Homepage" @click="HP = !HP" class="homelogo">
-        <a href="../index.html">
-          <img src="../public/icones/MdiHome.svg" alt="accueil">
+        <a href="index.html">
+          <img src="/public/icones/MdiHome.svg" alt="accueil">
         </a>
       </button>
     </aside>
   </header>
 
   <main>
+    <a href="/pages-exo/en/02-accordeon-number.html"><button>EN</button></a>
     <div x-data="{ isOpen: 0 }">
       <h2>Accordéon de nombres</h2>
       <section>
@@ -57,7 +58,7 @@
         <p x-show="isOpen === 1" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Pastèque
         </p>
         <section x-show="isOpen === 1" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>
-          <img class="media media--fullwidth" src="../public/images/fruits/pasteque.jpg">
+          <img class="media media--fullwidth" src="/public/images/fruits/pasteque.jpg">
         </section>
       </section>
       <section>
@@ -65,14 +66,14 @@
         <p x-show="isOpen === 2" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Framboise
         </p>
         <section x-show="isOpen === 2" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>
-          <img class="media media--fullwidth" src="../public/images/fruits/25039199.jpg">
+          <img class="media media--fullwidth" src="/public/images/fruits/25039199.jpg">
         </section>
       </section>
       <section>
         <button @click="isOpen = (isOpen === 3) ? 0 : 3">Fruit N°3</button>
         <p x-show="isOpen === 3" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Poire</p>
         <section x-show="isOpen === 3" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>
-          <img class="media media--fullwidth" src="../public/images/fruits/26059690.jpg">
+          <img class="media media--fullwidth" src="/public/images/fruits/26059690.jpg">
         </section>
       </section>
       <section>
@@ -80,7 +81,7 @@
         <p x-show="isOpen === 4" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>Fraise
         </p>
         <section x-show="isOpen === 4" x-transition:enter.scale.90.origin.top x-transition:leave.scale.50.origin.top>
-          <img class="media media--fullwidth" src="../public/images/fruits/fraises.jpg">
+          <img class="media media--fullwidth" src="/public/images/fruits/fraises.jpg">
         </section>
       </section>
     </div>
