@@ -1,7 +1,7 @@
 #onglets {
     display: flex;
     flex-direction: column;
-    height: auto;
+        height: auto;
 }
 
 #onglets ul {
@@ -17,7 +17,7 @@
     margin: 5px;
     border: 1px solid var(--secondary-color);
     background-color: var(--secondary-color);
-    border-radius: 5px 5px 0 0;
+    
     border-bottom: none;
     transition: background-color 0.3s ease;
     font-weight: bold;
@@ -34,20 +34,18 @@
     border: 1px solid var(--white);
     padding: 20px;
     position: relative;
-    height: 1000px;
     width: 97%;
     overflow: hidden;
     z-index: -1;
+    text-align: center;
 
 }
 
 #onglets div>div {
     display: none;
     opacity: 0;
-    position: absolute;
     height: auto;
-    top: 0;
-    left: 0;
+  
     width: 100%;
     transition: opacity 0.5s;
     overflow-y: auto;
@@ -59,7 +57,7 @@
 }
 
 .description-onglet {
-    color: var(--text-color);
+    color: var(--white);
     font-size: 18px;
     line-height: 1.5;
     margin-top: 10px;
@@ -85,4 +83,3 @@
         height: auto;
     }
 }
-
