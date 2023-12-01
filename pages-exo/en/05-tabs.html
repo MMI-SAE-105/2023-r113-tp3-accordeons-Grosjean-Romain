@@ -55,25 +55,51 @@
 
   <main>
     <a href="/pages-exo/fr/05-onglets.html"><button>FR</button></a>
-    <div id="onglets">
-      <h2>Tabs</h2>
+    <h2>Tabs</h2>
+    <div id="onglets" x-data="{estOuvert:1}">
       <ul role="tablist">
-        <li role="tab" :class="{ 'actif': ouvert === 1 }" @click="ouvert = 1">Past</li>
-        <li role="tab" :class="{ 'actif': ouvert === 2 }" @click="ouvert = 2">Present</li>
-        <li role="tab" :class="{ 'actif': ouvert === 3 }" @click="ouvert = 3">Futur</li>
+        <li role="tab" :class="{ 'actif': estOuvert === 1 }" @click="estOuvert = 1">Past</li>
+        <li role="tab" :class="{ 'actif': estOuvert === 2 }" @click="estOuvert = 2">Present</li>
+        <li role="tab" :class="{ 'actif': estOuvert === 3 }" @click="estOuvert = 3">Futur</li>
       </ul>
       <div>
-        <div x-show="ouvert === 1" role="tabpanel">
-          <h1>Panel 1</h1>
-          <p>Content of panel 1</p>
+        <div :class="{'actif': estOuvert === 1}" class="actif" role="tabpanel">
+          <h1>Pangea</h1>
+          <p>At the beginning of the 20th century, Alfred Wegener noticed that the layout of the continents meant that
+            the east coast
+            of South America seemed to fit perfectly into the west coast of Africa. Others had realised this long before
+            him, but he
+            was the first to use this observation to propose the theory of continental drift: a supercontinent, Pangea,
+            broke up at
+            the beginning of the Secondary Era and, since then, the continental masses resulting from this fragmentation
+            have
+            drifted along the Earth's surface.
+          </p>
+          <img src="/public/images/time/time1.jpg">
         </div>
-        <div x-show="ouvert === 2" role="tabpanel">
-          <h1>Panel 2</h1>
-          <p>Content of panel 2</p>
+        <div :class="{'actif': estOuvert === 2}" class="actif" role="tabpanel">
+          <h1>Nowadays</h1>
+          <p>Over the course of the 20th century, geologists came to accept that the continents on the surface of the
+            planet move
+            planet, on geological time scale. This process is known as "continental drift" and is explained by the
+            explained by
+            plate tectonics. The Earth's surface is now made up of twelve major tectonic plates tectonic plates (as well
+            numerous
+            minor ones).</p>
+          <img src="/public/images/time/time2.webp">
         </div>
-        <div x-show="ouvert === 3" role="tabpanel">
-          <h1>Panel 3</h1>
-          <p>Content of panel 3</p>
+        <div :class="{'actif': estOuvert === 3}" class="actif" role="tabpanel">
+          <h1>Pangaea Proxima</h1>
+          <p>Consequently, on a geological scale, the number of continents varies. There were other continents in the
+            geological
+            past, the palaeocontinents. We have been able to determine that there were periods in the history of the
+            Earth when
+            there only one large continent on its surface. The most recent, Pangea, dates back 250 million years. The
+            next single
+            continent" should appear in 250 million years' time, when Africa, Eurasia and the Eurasia and the This would
+            be the next
+            Pangea.</p>
+          <img src="/public/images/time/time3.webp">
         </div>
       </div>
     </div>
