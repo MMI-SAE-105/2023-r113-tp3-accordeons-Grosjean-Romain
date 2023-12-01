@@ -52,33 +52,37 @@
   <main>
     <a href="/pages-exo/fr/04-accordeon-horizontal.html"><button>FR</button></a>
     <h2>Accordion horizontal</h2>
-    <ul id="accordeon">
-      <li :class="{ actif: isOpen === 1 }">
+    <ul x-data="{estOuvert:1}" id="accordeon">
+      <li :class="{actif:estOuvert === 1}" @click="estOuvert = (estOuvert === 1)?0:1">
         <figure>
-          <img src="https://picsum.photos/100?random=1" alt="image 1" width="102">
+          <img src="/public/images/dinos/1.jpg" alt="image 1" width="102">
           <figcaption>
-            <h3>Lorem, ipsum dolor.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <h3>Origins</h3>
+            <p class="description-onglet">Paleoart, as an artistic discipline, began in the early 20s with artists such
+              as Charles R. Knight.</p>
           </figcaption>
         </figure>
       </li>
 
-      <li :class="{ actif: isOpen === 2 }">
+      <li :class="{actif:estOuvert === 2}" @click="estOuvert = (estOuvert === 2)?0:2">
         <figure>
-          <img src="https://picsum.photos/100?random=2" alt="image 2" width="102">
+          <img src="/public/images/dinos/2.jpg" alt="image 2" width="102">
           <figcaption>
-            <h3>Ratione, molestiae eos?</h3>
-            <p>Accusantium sequi eos quasi vero. Consectetur.</p>
+            <h3>Dinomania</h3>
+            <p class="description-onglet">It was in the 90s and 2000s that the discipline fully entered the mainstream.
+            </p>
           </figcaption>
         </figure>
       </li>
 
-      <li :class="{ actif: isOpen === 3 }">
+      <li :class="{actif: estOuvert === 3}" @click="estOuvert = (estOuvert === 3)?0:3">
         <figure>
-          <img src="https://picsum.photos/100?random=3" alt="image 3" width="102">
+          <img src="/public/images/dinos/3.png" alt="image 3" width="102">
           <figcaption>
-            <h3>Fugiat, totam voluptate?</h3>
-            <p>Pariatur tempore obcaecati officiis? Voluptatum, nesciunt.</p>
+            <h3>Soft-Revolution</h3>
+            <p class="description-onglet">Nowadays, at least since 2014 with the research and works of C. M. Kosemen,
+              totally redefining how to interpret extinct
+              species.</p>
           </figcaption>
         </figure>
       </li>

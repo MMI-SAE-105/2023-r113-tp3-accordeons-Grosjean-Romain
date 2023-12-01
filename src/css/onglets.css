@@ -36,6 +36,7 @@
     height: 200px;
     width: 100%;
     overflow: hidden;
+    z-index: -1;
 }
 
 #onglets div>div {
@@ -52,4 +53,9 @@
 #onglets div>div.actif {
     display: block;
     opacity: 1;
+}
+
+.description-onglet
+{
+    color: var(--text-color);
 }
