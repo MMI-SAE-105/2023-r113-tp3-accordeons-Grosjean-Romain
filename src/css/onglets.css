@@ -21,6 +21,7 @@
     border-bottom: none;
     transition: background-color 0.3s ease;
     font-weight: bold;
+    color: var(--primary-color);
 }
 
 #onglets ul li.actif {
@@ -33,7 +34,7 @@
     border: 1px solid var(--white);
     padding: 20px;
     position: relative;
-    height: 200px;
+    height: 1000px;
     width: 100%;
     overflow: hidden;
     z-index: -1;
@@ -48,6 +49,7 @@
     left: 0;
     width: 100%;
     transition: opacity 0.5s;
+    overflow-y: auto;
 }
 
 #onglets div>div.actif {
@@ -55,7 +57,17 @@
     opacity: 1;
 }
 
-.description-onglet
-{
+.description-onglet {
     color: var(--text-color);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+#onglets div>div.actif img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px var(--black);
 }
