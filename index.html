@@ -1,90 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{
-  menuIsOpen:false,
-  pM:false
-}" :class="{noscroll:menuIsOpen,}" x-data="{menuIsOpen:false}">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Éon d'Accordéons</title>
-  <link rel="icon" href="/public/icones/accordeon.svg">
-  <link rel="stylesheet" href="/src/css/style.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://unpkg.com/alpinejs"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGE</title>
+    <link rel="stylesheet" href="src/styles.css">
 </head>
 
 <body>
-  <header>
-    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn"><img
-        src="/public/icones/MdiMenu.svg"></button>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-      <ul>
-        <li class="menu-item"><img src="/public/icones/snake.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/01-accordeon-booleen.html" class="link-text">Booléen<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="/public/icones/fruit.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/02-accordeon-nombre.html" class="link-text">Nombre<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="/public/icones/saturn.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/03-accordeon-collapse.html" class="link-text">x-collapse<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/04-accordeon-horizontal.html" class="link-text">Horizontal<img
-              src="/public/icones/MdiMenuRight.svg" alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="/public/icones/EvaHashOutline.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/05-onglets.html" class="link-text">Onglets<img src="/public/icones/MdiMenuRight.svg"
-              alt="flèche lien" class="arrow__menu"></a></li>
-        <li class="menu-item"><img src="/public/icones/HeroiconsXCircle20Solid.svg" alt="Logo" class="logo"><a
-            href="/pages-exo/error404.html" class="link-text">Erreur 404<img src="/public/icones/MdiMenuRight.svg"
-              alt="flèche lien" class="arrow__menu"></a></li>
-      </ul>
+    <nav>
+        <ul>
+            <li>
+                <a href="/fr/">Français</a>
+            </li>
+            <li>
+                <a href="/en/">English</a>
+            </li>
+        </ul>
     </nav>
-  </header>
-
-  <main>
-    <section>
-      <h1>Éon d'Accordéons</h1>
-      <h2>Accueil</h2>
-      <p>
-        Bienvenue à tous. Ceci est une page dédiée à différentes possibilités d'accordéons au sein d'un site web.
-      </p>
-      <h2>Liste des pages</h2>
-    </section>
-    <button aria-controls="petitmenu" @click="pM = !pM">
-      Chemins d'accès</button>
-    <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
-      <ul>
-        <li><a class="link__pages" href="/pages-exo/01-accordeon-booleen.html">- Accordéon avec des booléens<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien" class="arrow"></a></li>
-        <li><a class="link__pages" href="/pages-exo/02-accordeon-nombre.html">- Accordéon mémorisant par un nombre
-            l'élément
-            ouvert<img src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien" class="arrow"></a>
-        </li>
-        <li><a class="link__pages" href="/pages-exo/03-accordeon-collapse.html">- Accordéon avec
-            <code>x-collapse</code><img src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"
-              class="arrow"></a></li>
-        <li><a class="link__pages" href="/pages-exo/04-accordeon-horizontal.html">- Accordéon horizontal<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien" class="arrow"></a></li>
-        <li><a class="link__pages" href="/pages-exo/05-onglets.html">- Onglets<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien" class="arrow"></a></li>
-        <li><a class="link__pages" href="/pages-exo/error404.html">- Erreur 404<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien" class="arrow"></a></li>
-      </ul>
-    </div>
-  </main>
-
-  <section>
-    <h3>Petite galerie</h3>
-    <img src="/public/images/640px-Spirk3einhalbbass.jpg" alt="accordeon 1" width="40%" height="40%">
-    <img src="/public/images/accordion-musical-instrument-handzuginstrument-musician-163823.jpg" alt="accordeon 2"
-      width="45%" height="40%">
-    <img src="/public/images/Accordions_-_Soinuenea.jpg" alt="accordeon 3" width="40%" height="40%">
-    <img src="/public/images/De_grootste_accordeon_ter_wereld.jpg" alt="accordeon 4" width="
-    
-  40%">
-  </section>
 </body>
 
 </html>
